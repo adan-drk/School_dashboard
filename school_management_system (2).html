@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Zeenat Muslim Model School</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script src="https://unpkg.com/lucide-icons"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    html { font-family: Inter, system-ui; }
+    .card { border-radius: 1rem; box-shadow: 0 1px 3px rgba(0,0,0,.1); border: 1px solid #e2e8f0; background: white; padding: 1rem; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body class="bg-slate-50 min-h-screen">
+  <!-- Topbar -->
+  <header class="sticky top-0 z-40 bg-indigo-600 text-white shadow">
+    <div class="max-w-7xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-white text-indigo-600 grid place-items-center font-bold">ZM</div>
+        <div>
+          <h1 class="text-lg font-bold">Zeenat Muslim Model School</h1>
+          <p class="text-xs opacity-80">School Management System</p>
+        </div>
+      </div>
+      <nav class="flex items-center gap-2 flex-wrap text-sm">
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="dashboard">Dashboard</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="students">Students</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="teachers">Teachers</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="classes">Classes</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="attendance">Attendance</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="fees">Fees</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="exams">Exams</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="results">Results</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="timetable">Timetable</button>
+        <button class="px-3 py-1 rounded bg-white/10 hover:bg-white/20" data-nav="announcements">Announcements</button>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Main -->
+  <main class="max-w-7xl mx-auto p-6 space-y-6">
+    <!-- Dashboard -->
+    <section id="view-dashboard">
+      <h2 class="text-xl font-semibold mb-4">Dashboard Overview</h2>
+      <div class="grid md:grid-cols-4 gap-4">
+        <div class="card"><h3 class="text-lg font-bold">👩‍🎓 Students</h3><p class="text-2xl">320</p></div>
+        <div class="card"><h3 class="text-lg font-bold">👨‍🏫 Teachers</h3><p class="text-2xl">25</p></div>
+        <div class="card"><h3 class="text-lg font-bold">🏫 Classes</h3><p class="text-2xl">15</p></div>
+        <div class="card"><h3 class="text-lg font-bold">📊 Exams</h3><p class="text-2xl">8</p></div>
+      </div>
+    </section>
+
+    <!-- Students -->
+    <section id="view-students" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Students</h2>
+      <div class="card overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-100 text-left"><th class="p-2">ID</th><th class="p-2">Name</th><th class="p-2">Class</th><th class="p-2">Contact</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2">1</td><td class="p-2">Ayesha Khan</td><td class="p-2">10-A</td><td class="p-2">0301-1234567</td></tr>
+            <tr><td class="p-2">2</td><td class="p-2">Ali Raza</td><td class="p-2">9-B</td><td class="p-2">0312-9876543</td></tr>
+            <tr><td class="p-2">3</td><td class="p-2">Sara Ahmed</td><td class="p-2">8-C</td><td class="p-2">0321-4455667</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Teachers -->
+    <section id="view-teachers" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Teachers</h2>
+      <div class="card overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-100 text-left"><th class="p-2">ID</th><th class="p-2">Name</th><th class="p-2">Subject</th><th class="p-2">Contact</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2">1</td><td class="p-2">Mr. Imran</td><td class="p-2">Mathematics</td><td class="p-2">0302-2233445</td></tr>
+            <tr><td class="p-2">2</td><td class="p-2">Ms. Fatima</td><td class="p-2">English</td><td class="p-2">0333-7788990</td></tr>
+            <tr><td class="p-2">3</td><td class="p-2">Mr. Bilal</td><td class="p-2">Science</td><td class="p-2">0345-1122334</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Classes -->
+    <section id="view-classes" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Classes</h2>
+      <div class="card">
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Class 10-A – 35 Students</li>
+          <li>Class 9-B – 30 Students</li>
+          <li>Class 8-C – 28 Students</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Attendance -->
+    <section id="view-attendance" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Attendance (Sample)</h2>
+      <div class="card overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-100 text-left"><th class="p-2">Date</th><th class="p-2">Class</th><th class="p-2">Present</th><th class="p-2">Absent</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2">2025-08-25</td><td class="p-2">10-A</td><td class="p-2">30</td><td class="p-2">5</td></tr>
+            <tr><td class="p-2">2025-08-25</td><td class="p-2">9-B</td><td class="p-2">28</td><td class="p-2">2</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Fees -->
+    <section id="view-fees" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Fees (Sample)</h2>
+      <div class="card overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-100 text-left"><th class="p-2">Student</th><th class="p-2">Month</th><th class="p-2">Status</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2">Ayesha Khan</td><td class="p-2">August</td><td class="p-2 text-green-600">Paid</td></tr>
+            <tr><td class="p-2">Ali Raza</td><td class="p-2">August</td><td class="p-2 text-red-600">Unpaid</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Exams -->
+    <section id="view-exams" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Exams Schedule</h2>
+      <div class="card">
+        <ul class="list-disc pl-6 space-y-1">
+          <li>Mid-Terms – 15th Sept 2025</li>
+          <li>Final Exams – 20th Dec 2025</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- Results -->
+    <section id="view-results" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Results (Sample)</h2>
+      <div class="card overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-100 text-left"><th class="p-2">Student</th><th class="p-2">Subject</th><th class="p-2">Marks</th><th class="p-2">Grade</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2">Ayesha Khan</td><td class="p-2">Math</td><td class="p-2">90</td><td class="p-2">A+</td></tr>
+            <tr><td class="p-2">Ali Raza</td><td class="p-2">Science</td><td class="p-2">70</td><td class="p-2">B</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Timetable -->
+    <section id="view-timetable" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Class Timetable</h2>
+      <div class="card overflow-x-auto">
+        <table class="w-full text-sm">
+          <thead><tr class="bg-slate-100 text-left"><th class="p-2">Day</th><th class="p-2">10-A</th><th class="p-2">9-B</th></tr></thead>
+          <tbody>
+            <tr><td class="p-2">Monday</td><td class="p-2">Math, English</td><td class="p-2">Science, Urdu</td></tr>
+            <tr><td class="p-2">Tuesday</td><td class="p-2">Physics, Islamiat</td><td class="p-2">Math, Computer</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Announcements -->
+    <section id="view-announcements" class="hidden">
+      <h2 class="text-xl font-semibold mb-4">Announcements</h2>
+      <div class="card space-y-2">
+        <div class="p-2 border-b"><strong>Independence Day:</strong> School will remain closed on 14th August.</div>
+        <div class="p-2 border-b"><strong>Parent Teacher Meeting:</strong> Scheduled for 5th September.</div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="text-center text-xs text-slate-500 py-8">© 2025 Zeenat Muslim Model School — Free & Open School Management System</footer>
+
+  <script>
+    const sections = ["dashboard","students","teachers","classes","attendance","fees","exams","results","timetable","announcements"];
+    const buttons = document.querySelectorAll("[data-nav]");
+    buttons.forEach(btn => btn.addEventListener("click", () => {
+      const name = btn.dataset.nav;
+      sections.forEach(s => document.getElementById("view-"+s).classList.add("hidden"));
+      document.getElementById("view-"+name).classList.remove("hidden");
+    }));
+  </script>
+</body>
+</html>
